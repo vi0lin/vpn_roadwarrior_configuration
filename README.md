@@ -35,6 +35,9 @@ It forwards all my LAN Devices.
 ```
 wget -qO- https://raw.githubusercontent.com/vi0lin/vpn_roadwarrior_configuration/refs/heads/main/server_b.sh | bash -s -- debug
 ```
+[Workingstation](https://www.dell.com/de-de/shop/cty/pdp/spd/wyse-5070-thin-client)
+You could also use a Raspberry Pi
+You dont neet the roadwarrior configuration at all, but having it is cozy.
 
 ## Client Google A14
 Install the strongswan app.

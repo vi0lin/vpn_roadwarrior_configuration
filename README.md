@@ -13,7 +13,7 @@ Share Your Git Repositories
 Make Your Windwos, Linux and MacOs Accessibile
 Host Websites and Apps
 Share Files Between The Devices And Develop And Deploy Projects Quickly
-Device Via SSH and Broadcast Data Like Audio, Video and Other Packages.
+Device Via SSH and Broadcast Data Like Audio, Video and Other Packages Internally.
 
 ## Server A
 This is a low budget VPS from any provider of your choice.

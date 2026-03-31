@@ -19,7 +19,7 @@ sysctl net.inet.ip.forwarding=1
 
 b_public=$(cat /usr/local/etc/wireguard/b.public)
 
-# WireGuard on A (/usr/local/etc/wireguard/wg0.conf)
+# WireGuard on B (/usr/local/etc/wireguard/wg0.conf)
 ```
 [Interface] # B
 PrivateKey = $b_private
@@ -32,7 +32,7 @@ Endpoint = $a_public_ip:51820
 PersistentKeepalive = 25
 ``` > /usr/local/etc/wireguard/wg0.conf
 
-# pf on A (/etc/pf.conf)
+# pf on B (/etc/pf.conf)
 ```
 ext_if="re0"
 lan_if="re0"

@@ -14,7 +14,7 @@ sysrc pf_enable=YES
 sysctl net.inet.ip.forwarding=1
 
 # todo Check if files exists, ask for creating new ones.
-#
+
 # todo copy files across A B and C
 
 b_public=$(cat /usr/local/etc/wireguard/b.public)
@@ -25,7 +25,6 @@ b_public=$(cat /usr/local/etc/wireguard/b.public)
 PrivateKey = $b_private
 Address = 10.9.0.2/24
 ListenPort = 51820
-
 [Peer] # A
 PublicKey = $a_public
 AllowedIPs = 10.9.0.0/24, 10.8.0.0/24
@@ -38,10 +37,7 @@ PersistentKeepalive = 25
 ext_if="re0"
 lan_if="re0"
 wg_if="wg0"
-
 # Option B
-# nat on $lan_if from 10.8.0.0/24 to $b_lan -> ($lan_if)
-# nat on $lan_if from 10.9.0.1/24 to $b_lan -> ($lan_if)
 nat on $lan_if from { 10.8.0.0/24, 10.9.0.0/24 } to $b_lan -> ($lan_if)
 nat on $lan_if from $b_lan to { 10.8.0.0/24, 10.9.0.0/24 } -> ($wg_if)
 # Allow everything on loopback

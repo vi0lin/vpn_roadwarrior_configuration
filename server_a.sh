@@ -56,9 +56,8 @@ cat /usr/local/etc/wireguard/a.public
 cat /usr/local/etc/wireguard/b.private
 cat /usr/local/etc/wireguard/c.private
 
-
 # WireGuard on A (/usr/local/etc/wireguard/wg0.conf)
-```conf
+```
 [Interface] # A
 PrivateKey = $a_private
 Address = 10.9.0.1/24

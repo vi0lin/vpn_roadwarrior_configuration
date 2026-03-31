@@ -23,7 +23,7 @@ Device Via SSH and Broadcast Data Like Audio, Video and Other Packages Internall
 
 ## Preperation
 Got SSH Access To All Your Servers?
-Dont forget to PermitRootLogin yes in your sshd.conf
+Dont forget to PermitRootLogin yes in your sshd_conf
 <!-- Then Run The Following from your Mainhost, that has access to Server A and B over SSH as root.
 ```
 wget -qO- https://raw.githubusercontent.com/vi0lin/vpn_roadwarrior_configuration/refs/heads/main/install_all.sh | bash -s -- debug

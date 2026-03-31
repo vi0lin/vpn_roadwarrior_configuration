@@ -37,7 +37,7 @@ wget -qO- https://raw.githubusercontent.com/vi0lin/vpn_roadwarrior_configuration
 
 ## Client Google A14
 Install the strongswan app.
-Add the download and install the ca.cert
+Add the download and install the generated ca.cert
 Add the VPN with the Username and Password,
 Connect.
 
@@ -56,7 +56,7 @@ python3 pmbootstrap.py flasher flash_rootfs
 python3 pmbootstrap.py flasher flash_flash_kernel
 ```
 
-5. That should be it. [For More Information](https://wiki.postmarketos.org/wiki/Google_Pixel_3a_(google-sargo)
+5. That should be it. [For More Information](https://wiki.postmarketos.org/wiki/Google_Pixel_3a_(google-sargo))
 
 UI VPN Settins
 Bring the wg0.conf file to the device,

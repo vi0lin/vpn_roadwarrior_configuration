@@ -37,8 +37,7 @@ wget -qO- https://raw.githubusercontent.com/vi0lin/vpn_roadwarrior_configuration
 ```
 Buy a [Workingstation](https://www.dell.com/de-de/shop/cty/pdp/spd/wyse-5070-thin-client)
 Or You could also use a Raspberry Pi
-You dont neet the roadwarrior configuration at all, but having it is cozy, because you could consider hosting Git Repositories for your friends on it.
-Accessibile trough SSH or HTTP/HTTPS folder [Explanaition Follows](https://github.com/vi0lin/)
+You dont neet the roadwarrior configuration at all, but having it is cozy, because you could consider hosting Git Repositories for your friends on it. They will be accessibile trough SSH or HTTP/HTTPS [Explanaition Follows](https://github.com/vi0lin/)
 
 ## Client Google A14
 Install the strongswan app.

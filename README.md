@@ -68,7 +68,7 @@ Connect.
 My Google Pixel 3a has a rooted system.
 1. Hold Power & Volume Up Button
 2. Unlock the bootloader
-3. Quickly Install Ubuntu On A External Device (Live-System Runs out of memory)
+3. Quickly Install Ubuntu On an External Device (Live-System Runs out of memory)
 4. Connect via USB to your Ubuntu System
 5. Use pmbootstrap [Troubleshooting](https://wiki.postmarketos.org/wiki/Pmbootstrap/Installation)
 ```

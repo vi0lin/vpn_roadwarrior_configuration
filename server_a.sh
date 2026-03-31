@@ -54,25 +54,23 @@ cat /usr/local/etc/wireguard/b.private
 cat /usr/local/etc/wireguard/c.private
 
 
-#### WireGuard on A (/usr/local/etc/wireguard/wg0.conf)
+# WireGuard on A (/usr/local/etc/wireguard/wg0.conf)
 ```conf
 [Interface] # A
 PrivateKey = $a_private
 Address = 10.9.0.1/24
 ListenPort = 51820
-
 [Peer] # B
 PublicKey = $b_public
 AllowedIPs = 10.9.0.2/32, $b_lan
 PersistentKeepalive = 25
-
 [Peer] # C
 PublicKey = $c_public
 AllowedIPs = 10.9.0.3/32
 PersistentKeepalive = 25
-```
+``` > /usr/local/etc/wireguard/wg0.conf
 
-#### swanctl.conf on A (/usr/local/etc/swanctl/swanctl.conf)
+# Swanctl on A (/usr/local/etc/swanctl/swanctl.conf)
 ```
 # Include config snippets
 include conf.d/*.conf
@@ -118,10 +116,31 @@ secrets {
     secret = "$secret"
   }
 }
+``` > /usr/local/etc/swanctl/swanctl.conf
+
+# pf on A (/etc/pf.conf)
 ```
+ext_if="vtnet0"
+wg_if="wg0"
+lo_if="lo0"
+# NAT for external to B's LAN via wg interface
+nat on $ext_if from any to $b_lan -> ($wg_if)
+# IKEv2
+pass in on $ext_if proto udp from any to any port {500,4500}
+# WireGuard from any
+pass in on $ext_if proto udp to port 51820
+# Allow VPN clients to reach B's LAN
+pass on $wg_if from { 10.8.0.0/24 , 10.9.0.0/24, self } to $b_lan
+pass on $wg_if from { 10.8.0.0/24 , 10.9.0.0/24, self } to 10.8.0.0/24
+pass on $wg_if from { 10.8.0.0/24 , 10.9.0.0/24, self } to 10.9.0.0/24
+# Comment
+pass in on $wg_if from $b_lan to { 10.8.0.0/24, 10.9.0.0/23, self }
+# Comment
+pass in on $wg_if from $b_lan to { 10.8.0.0/24, 10.9.0.0/24 }
+pass out on enc0 from $b_lan to { 10.8.0.0/24, 10.9.0.0/24 }
+``` > /etc/pf.conf
 
-
-
+# Strongswan on A (/usr/local/etc/strongswan.conf)
 ## For Deeper Strongswan Log Uncomment filelog section
 ## Use tail -f /var/log/charonlog
 ## This is for cipher and hashing proposal investigation, when windows fails.
@@ -148,4 +167,4 @@ charon {
   }
 }
 include strongswan.d/*.conf
-```
+``` > /usr/local/etc/strongswan.conf

@@ -32,7 +32,7 @@ Otherwise run the following shell snippets on them.
 No Identity File Support. Consider Modifying The Install_all.sh script.
 -->
 
-## Server A
+## [Server A](https://github.com/vi0lin/vpn_roadwarrior_configuration/main/server_a.sh)
 This is a low budget VPS from any provider of your choice.
 I installed the newest FreeBSD image.
 My Clients connect to this VPS via Wireguard.
@@ -45,7 +45,7 @@ wget -qO- https://raw.githubusercontent.com/vi0lin/vpn_roadwarrior_configuration
 ```
 I recommend using [Hetzner](https://www.hetzner.com) vps server. They offer under 5 Euro per month static ip dual core server with 20 TB traffic.
 
-## Server B
+## [Server B](https://github.com/vi0lin/vpn_roadwarrior_configuration/main/server_b.sh)
 This is low budget Workingstation for less than 60 Euro On Europerian Market.
 It runs a freeBSD image
 I configured it a Roadwarrior, that passes all my local devices to the connected VPN clients. This way my printer stays accessibile, even on holidays.

@@ -36,9 +36,9 @@ No Identity File Support. Consider Modifying The Install_all.sh script.
 This is a low budget VPS from any provider of your choice.
 I installed the newest FreeBSD image.
 My Clients connect to this VPS via Wireguard.
-  My Limited Android Phone Uses the Strongswan App, because builtin VPN support Is not supporting 
-  Rooted Android Phones Can Use Wireguard instead.
-  Windows Clients use the built-in
+My Limited Android Phone Uses the Strongswan App, because builtin VPN support Is not supporting.
+Rooted Android Phones Can Use Wireguard instead.
+Windows Clients use the built-in.
 Run this shell script on server A:
 ```
 wget -qO- https://raw.githubusercontent.com/vi0lin/vpn_roadwarrior_configuration/refs/heads/main/server_a.sh | bash -s -- debug

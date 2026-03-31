@@ -25,7 +25,7 @@ My Clients connect to this VPS via Wireguard.
 ```
 wget -qO- https://raw.githubusercontent.com/vi0lin/vpn_roadwarrior_configuration/refs/heads/main/server_a.sh | bash -s -- debug
 ```
-I recommend [Hetzner](https://www.hetzner.com) for cheap under 5 Euro per month vps with 20 TB traffic.
+I recommend using [Hetzner](https://www.hetzner.com) vps server. They offer under 5 Euro per month static ip dual core server with 20 TB traffic.
 
 ## Server B
 This is low budget Workingstation for less than 60 Euro On Europerian Market.

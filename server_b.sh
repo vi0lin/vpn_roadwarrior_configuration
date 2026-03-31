@@ -17,8 +17,6 @@ sysctl net.inet.ip.forwarding=1
 
 # todo copy files across A B and C
 
-b_public=$(cat /usr/local/etc/wireguard/b.public)
-
 # WireGuard on B (/usr/local/etc/wireguard/wg0.conf)
 ```
 [Interface] # B

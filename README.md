@@ -4,6 +4,13 @@ Cheap/Free
 Flexibile
 Vpn Solution
 
+Saving CPU power
+Lower workload, immediate availability
+Avoid wasting resources
+
+Most solutions are feature-rich and therefore have large workload fluctuations. I want to perform stable, highly available, and efficient cross-network operations without overloading my server farm.
+<!-- Think of GitLab or Bitfocus Companion -->
+
 * FreeBSD
 * Strongswan
 * Wireguard

@@ -19,6 +19,7 @@ Make Your Windwos, Linux and MacOs Accessibile
 Host Websites and Apps
 Share Files Between The Devices And Develop And Deploy Projects Quickly
 Device Via SSH and Broadcast Data Like Audio, Video and Other Packages Internally.
+![VPN Configuration Diagram](https://raw.githubusercontent.com/vi0lin/vpn_roadwarrior_configuration/refs/heads/main/vpn_roadwarrior_configuration.webp)
 
 ## Preperation
 Got SSH Access To All Your Servers?

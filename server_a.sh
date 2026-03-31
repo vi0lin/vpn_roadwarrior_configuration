@@ -10,6 +10,9 @@ pkg install strongswan wireguard-tools
 sysrc strongswan_enable=YES
 sysrc wireguard_enable=YES
 sysrc wireguard_interfaces="wg0"
+sysrc pf_enable=YES
+
+sysctl net.inet.ip.forwarding=1
 
 # todo Check if files exists, ask for creating new ones.
 
@@ -168,3 +171,7 @@ charon {
 }
 include strongswan.d/*.conf
 ``` > /usr/local/etc/strongswan.conf
+
+service pf restart
+service strongswan restart
+service wireguard restart

@@ -12,9 +12,6 @@ Most solutions are feature-rich and therefore have large workload fluctuations. 
 * Lower workload, immediate availability
 * Avoid wasting resources
 
-<!-- Think of GitLab or Bitfocus Companion -->
-
-
 # Explanation
 VPN On The Go,
 Connect All Your Devices,

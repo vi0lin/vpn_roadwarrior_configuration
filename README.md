@@ -1,20 +1,19 @@
 # vpn_roadwarrior_configuration
-Easy To Use
-Cheap/Free
-Flexibile
-Vpn Solution
-
-Saving CPU power
-Lower workload, immediate availability
-Avoid wasting resources
-
-Most solutions are feature-rich and therefore have large workload fluctuations. I want to perform stable, highly available, and efficient cross-network operations without overloading my server farm.
-<!-- Think of GitLab or Bitfocus Companion -->
+Easy To Use - Cheap/Free - Flexibile - Vpn Solution
 
 * FreeBSD
 * Strongswan
 * Wireguard
 * pf
+
+Most solutions are feature-rich and therefore have large workload fluctuations. I want to perform stable, highly available, and efficient cross-network operations without overloading my server farm.
+
+* Saving CPU power
+* Lower workload, immediate availability
+* Avoid wasting resources
+
+<!-- Think of GitLab or Bitfocus Companion -->
+
 
 # Explanation
 VPN On The Go,

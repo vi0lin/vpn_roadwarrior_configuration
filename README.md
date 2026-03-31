@@ -4,6 +4,11 @@ Cheap/Free
 Flexibile
 Vpn Solution
 
+* FreeBSD
+* Strongswan
+* Wireguard
+* pf
+
 # Explanation
 VPN On The Go,
 Connect All Your Devices,
@@ -15,6 +20,17 @@ Host Websites and Apps
 Share Files Between The Devices And Develop And Deploy Projects Quickly
 Device Via SSH and Broadcast Data Like Audio, Video and Other Packages Internally.
 
+## Preperation
+Got SSH Access To All Your Servers?
+Dont forget to PermitRootLogin yes in your sshd.conf
+<!-- Then Run The Following from your Mainhost, that has access to Server A and B over SSH as root.
+```
+wget -qO- https://raw.githubusercontent.com/vi0lin/vpn_roadwarrior_configuration/refs/heads/main/install_all.sh | bash -s -- debug
+```
+Otherwise run the following shell snippets on them.
+No Identity File Support. Consider Modifying The Install_all.sh script.
+-->
+
 ## Server A
 This is a low budget VPS from any provider of your choice.
 I installed the newest FreeBSD image.
@@ -22,6 +38,7 @@ My Clients connect to this VPS via Wireguard.
   My Limited Android Phone Uses the Strongswan App, because builtin VPN support Is not supporting 
   Rooted Android Phones Can Use Wireguard instead.
   Windows Clients use the built-in
+Run this shell script on server A:
 ```
 wget -qO- https://raw.githubusercontent.com/vi0lin/vpn_roadwarrior_configuration/refs/heads/main/server_a.sh | bash -s -- debug
 ```
@@ -32,6 +49,7 @@ This is low budget Workingstation for less than 60 Euro On Europerian Market.
 It runs a freeBSD image
 I configured it a Roadwarrior, that passes all my local devices to the connected VPN clients. This way my printer stays accessibile, even on holidays.
 It forwards all my LAN Devices.
+Run this shell script on server B:
 ```
 wget -qO- https://raw.githubusercontent.com/vi0lin/vpn_roadwarrior_configuration/refs/heads/main/server_b.sh | bash -s -- debug
 ```

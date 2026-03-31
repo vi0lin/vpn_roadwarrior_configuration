@@ -47,7 +47,7 @@ My Google Pixel 3a has a rooted system.
 2. Unlock the bootloader
 3. Quickly Install Ubuntu On A External Device (Live-System Runs out of memory)
 4. Connect via USB to your Ubuntu System
-5. Use pmbootstrap [Check this out](https://wiki.postmarketos.org/wiki/Pmbootstrap/Installation)
+5. Use pmbootstrap [Troubleshooting](https://wiki.postmarketos.org/wiki/Pmbootstrap/Installation)
 ```
 git clone https://gitlab.postmarketos.org/postmarketOS/pmbootstrap.git
 cd pmbootstrap
@@ -55,6 +55,7 @@ python3 pmbootstrap.py init
 python3 pmbootstrap.py flasher flash_rootfs
 python3 pmbootstrap.py flasher flash_flash_kernel
 ```
+
 5. That should be it. [For More Information](https://wiki.postmarketos.org/wiki/Google_Pixel_3a_(google-sargo)
 
 UI VPN Settins

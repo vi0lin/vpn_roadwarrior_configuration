@@ -57,14 +57,11 @@ wget -qO- https://raw.githubusercontent.com/vi0lin/vpn_roadwarrior_configuration
 Buy a [Workingstation](https://www.dell.com/de-de/shop/cty/pdp/spd/wyse-5070-thin-client)
 Or You could also use a Raspberry Pi
 You dont neet the roadwarrior configuration at all, but having it is cozy, because you could consider hosting Git Repositories for your friends on it. They will be accessibile trough SSH or HTTP/HTTPS [Explanaition Follows](https://github.com/vi0lin/)
+Another good scenario is having a Samba Share running on a thin home server, standing at home, for quicker file access.
+In my case, I am hosting a SMB/CIFS server on my Linux Laptop.
+I will share, how to quickly setup SMB and FTP, that is accessibile as a Networkdrive and as FTP Server from Linux, Windows, MacOs, iOs, Android devices all across your Private Network.
 
-## Client Google A14
-Install the strongswan app.
-Add the download and install the generated ca.cert
-Add the VPN with the Username and Password,
-Connect.
-
-## Google Pixel 3a (postmarket os - sargo)
+## Client C - Google Pixel 3a (postmarket os - sargo)
 My Google Pixel 3a has a rooted system.
 1. Hold Power & Volume Up Button
 2. Unlock the bootloader
@@ -90,6 +87,13 @@ Or execute the following in the terminal app:
 ```
 wget -qO- https://raw.githubusercontent.com/vi0lin/vpn_roadwarrior_configuration/refs/heads/main/client_sargo.sh | bash -s -- debug
 ```
+
+## Another Client Google A14
+Install the strongswan app. The built-in vpn solution has trouble, to split-tunnel the routes, so internet inaccessible.
+Add the wg0.conf and install the generated ca.cert.
+Add the VPN with the set Username and Password.
+Connect.
+All Devices Are Accessible.
 
 ## Windows Client
 Everything works fine with the built-in VPN IKEv2 branch. A simple powershell fix needs to be run as admin, configuring the proper cipher method, as windows does only deliver some cipher-, encryption-, decryption-, encapsulating or hashing algorithms only up to 1024 bits.

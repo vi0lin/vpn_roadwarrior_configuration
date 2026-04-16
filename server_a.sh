@@ -1,7 +1,9 @@
 #!/usr/bin/bash
 
-public_ip=$1
-b_lan=192.168.1.0/24
+public_ip=$(ifconfig | awk '/inet / && $2 !~ /^127\./ && $2 !~ /^192\.168\./ && $2 !~ /^10\./ {print $2; exit}')
+default_b_lan=192.168.1.0/24
+read -p "B LAN [$default_b_lan]: " b_lan
+b_lan=${b_lan:-$default_b_lan}
 
 user="user"
 secret=$(head -c 16 /dev/urandom | base64 | tr -dc 'a-zA-Z0-9')
